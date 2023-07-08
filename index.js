@@ -35,10 +35,10 @@ scene.add(cube); // add cube to scene
 
 
 //Texture of the floor
-const floorTexture = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GULLLYYYYY/Art-Gallery-Three.js/main/Images/Floor%202.jpg')
+const floorTexture = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GULLLYYYYY/Art-Gallery-Three.js/main/Images/Floor%206.jpg')
 floorTexture.wrapS = THREE.RepeatWrapping;
 floorTexture.wrapT = THREE.RepeatWrapping;
-floorTexture.repeat.set(20,20);
+floorTexture.repeat.set(10,10);
 
 //create floor plane.
 const planeGeometry = new THREE.PlaneBufferGeometry(50, 50); //box geometery is the shape of the object
@@ -110,21 +110,21 @@ function createPainting(imageURL, width, height, position) {
   const paintingMaterial = new THREE.MeshBasicMaterial({
     map: paintingTexture,
   });
-  const paintingGeometry = new THREE.planeGeometry(width, height);
+  const paintingGeometry = new THREE.PlaneGeometry(width, height);
   const painting = new THREE.Mesh(paintingGeometry, paintingMaterial);
   painting.position.set(position.x, position.y, position.z);
   return painting; 
 }
 
 const painting1 = createPainting(
-  'image i guess',
+  'https://raw.githubusercontent.com/GULLLYYYYY/Art-Gallery-Three.js/main/Images/12.-Son-of-Man.jpg',
   10,
   5,
   new THREE.Vector3(-10, 5, -18)
 );
 
 const painting2 = createPainting(
-  'image i guess',
+  'https://raw.githubusercontent.com/GULLLYYYYY/Art-Gallery-Three.js/main/Images/Rene%20Magritte.jpg',
   10,
   5,
   new THREE.Vector3(-10, 5, -20)
