@@ -144,6 +144,28 @@ scene.add(painting1, painting2);
 
 
 // Controls
+
+const controls = new PointerLockControls(camera, document.body);
+
+function StartExperience() {
+  controls.lock();
+
+  hidemenu();
+}
+
+const playButton = document.getElementById('play_button');
+playButton.addEventListener('click', startExperience);
+
+function hideMenu() {
+  const menu = document.getElementById('menu')
+  menu.style.display('none');
+}
+
+function showMenu() {
+  const menu = document.getElementById('menu')
+  menu.style.display('block');
+}
+
 // Event Listenet for when we press the keys
 document.addEventListener('keydown', onKeyDown, false);
 
